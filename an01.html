@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width", initial-scale="1">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    
+</head>
+<body>
+   <h2>AngularJS App</h2>
+    <div ng-app="" ng-init="name='Jone'">
+        <p>Name: <input type="text" id="name" ng-model="name"></p>
+        <p ng-bind="name"></p>
+    </div>
+    <hr>
+    <h3>Event istner로 구현</h3>
+    <p>Name: <input type="text" value="Jenny" id="st"></p>
+    <p id="key_input"></p>
+    
+    <script>
+        var st = document.getElementById("st");
+        var key_input = document.getElementById("key_input");
+        st.addEventListener("input",copy);
+        
+        function copy(){
+            key_input.innerHTML = st.value;
+        }
+    </script>
+</body>
+</html>
